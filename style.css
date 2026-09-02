@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+.container{
+    border: 1px solid black;
+    width: 420px;
+    height: 380px;
+    padding: 20px;
+}
+.heading-area{
+    display: flex;
+    justify-content: space-between;
+}
+header{
+    text-align: center;
+    margin: 20px 10px;
+}
+.convertion-menu{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.hide-display{
+    display: none;
+}
+.show-display{
+    display: block;
+}
