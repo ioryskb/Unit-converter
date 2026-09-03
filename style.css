@@ -30,9 +30,10 @@ header{
 .convertion-menu{
     display: flex;
     flex-direction: column;
-
 }
-
+.convertion-menu button{
+    margin-bottom: 10px;
+}
 .hide-display{
     display: none;
 }

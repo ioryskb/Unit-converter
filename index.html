@@ -16,23 +16,46 @@
         <div class="convertion-menu">
             <header>What would you like to convert?</header>
             <button id="temperature">Fahrenheit to Celcius</button>
+            <button id="weight">Pounds to Kilogram</button>
         </div>
-        <div class="calculation hide-display">
-            <div class="fahrenheit">
-                <p>°F</p>
-                <input type="number" id="fahrenheit-value">
-            </div>
+        <div class="conversion-area hide-display">
+        <!-- Temperature calculation area -->
+            <div class="temperature-calculation hide-display">
 
-            <div class="celsius">
-                <p>°C</p>
-                <input type="number" id="celsius-value">
-            </div>
+                <div class="fahrenheit">
+                    <p>°F</p>
+                    <input type="number" id="fahrenheit-value">
+                </div>
 
+                <div class="celsius">
+                    <p>°C</p>
+                    <input type="number" id="celsius-value">
+                </div>
+
+                
+
+            </div>
+        <!-- Temperature calculation area end -->
+
+        <!-- Weight calculation area -->
+            <div class="weight-calculation hide-display">
+
+                <div class="pounds">
+                    <p>Pounds</p>
+                    <input type="number" id="pound-value">
+                </div>
+
+                <div class="kilogram">
+                    <p>Kilogram</p>
+                    <input type="number" id="kilogram-value">
+                </div>
+
+            </div>
+        <!-- Weight calculation area end -->
             <div class="calculation-Btn">
                 <button id="convert-temp">Convert</button>
                 <button id="back">Back</button>
             </div>
-
         </div>
     </div>
     <script src="index.js"></script>
