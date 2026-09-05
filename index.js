@@ -1,7 +1,9 @@
 const tempBtn = document.getElementById("temperature")
 const weightBtn = document.getElementById("weight")
+const lengthBtn = document.getElementById("length")
 const tempConversionSection = document.querySelector(".temperature-calculation")
 const weightConversionSection = document.querySelector(".weight-calculation")
+const lengthConversionSection = document.querySelector(".length-calculation")
 
 const backBtn = document.getElementById("back")
 const conversionArea = document.querySelector(".conversion-area")
@@ -13,12 +15,15 @@ const fahrenheitValue = document.getElementById("fahrenheit-value")
 const celsiusValue = document.getElementById("celsius-value")
 const poundsValue = document.getElementById("pound-value")
 const kilogramValue = document.getElementById("kilogram-value")
+const inchValue = document.getElementById("inch-value")
+const cmValue = document.getElementById("cm-value")
 
 
 tempBtn.addEventListener("click", function(){
     conversionMenu.classList.add('hide-display')
     weightConversionSection.classList.add('hide-display')
     tempConversionSection.classList.remove('hide-display')
+    lengthConversionSection.classList.add('hide-display')
     conversionArea.classList.remove('hide-display')
 })
 
@@ -26,6 +31,15 @@ weightBtn.addEventListener("click", function(){
     conversionMenu.classList.add('hide-display')
     tempConversionSection.classList.add('hide-display')
     weightConversionSection.classList.remove('hide-display')
+    lengthConversionSection.classList.add('hide-display')
+    conversionArea.classList.remove('hide-display')
+})
+
+lengthBtn.addEventListener("click", function(){
+    conversionMenu.classList.add('hide-display')
+    tempConversionSection.classList.add('hide-display')
+    weightConversionSection.classList.add('hide-display')
+    lengthConversionSection.classList.remove('hide-display')
     conversionArea.classList.remove('hide-display')
 })
 
@@ -55,6 +69,18 @@ backBtn.addEventListener("click", function(){
     kilogramValue.addEventListener("input", () => {
         let result = (kilogramValue.valueAsNumber * 2.205)
         poundsValue.value = result
+    })
+
+    /* ======================================================== */
+
+         /* ============== Length calculation ================ */
+     inchValue.addEventListener("input", () => {
+        let result = (inchValue.valueAsNumber * 2.54)
+        cmValue.value = result
+    })
+    cmValue.addEventListener("input", () => {
+        let result = (cmValue.valueAsNumber / 2.54)
+        inchValue.value = result
     })
 
     /* ======================================================== */
