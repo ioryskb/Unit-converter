@@ -5,6 +5,13 @@
     font-family: sans-serif;
 }
 
+:root {
+  --primary-color: #798BA1;
+  --secondary-color: #BFF5FF;
+  --main-font-color: #FEFEFE;
+}
+/* var(--primary-color); */
+
 body{
     display: flex;
     flex-direction: column;
@@ -15,8 +22,8 @@ body{
 }
 .container{
     border: 1px solid black;
-    width: 420px;
-    height: 380px;
+    width: 380px;
+    height: 420px;
     padding: 20px;
 }
 .heading-area{
@@ -32,7 +39,22 @@ header{
     flex-direction: column;
 }
 .convertion-menu button{
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 20px 12px;
+    border: none;
+    border-radius: 12px;
+    margin-bottom: 6px;
+    background: var(--primary-color);
+    color: var(--main-font-color);
+
+    &:hover{
+        background: #6D7D91;
+    }
+}
+.convertion-menu button span{
+    padding-top: 20px ;
 }
 .hide-display{
     display: none;
@@ -40,3 +62,69 @@ header{
 .show-display{
     display: block;
 }
+
+/* Conversion screen design */
+
+.temperature-calculation{
+    display: flex;
+}
+.fahrenheit{
+    height: 100%;
+    width: 100%;
+    margin-right: 5px;
+    border-radius: 20px 0 0 20px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+.fahrenheit p, .celsius p{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 150px;
+}
+.fahrenheit input{
+    margin-bottom: 50px;
+    border: none;
+    outline: none;
+    text-align: center;
+    background: #7F96A8;
+    color: var(--secondary-color);
+    font-size: 30px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    display: block;
+    margin-inline: auto;
+    width: 50%;
+}
+.fahrenheit input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.celsius{
+    height: 100%;
+    width: 100%;
+    border-radius: 0 20px 20px 0;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+.celsius input{
+    margin-bottom: 50px;
+    border: none;
+    outline: none;
+    background: #B8E9F7;
+    color: var(--primary-color);
+    font-size: 30px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    display: block;
+    margin-inline: auto;
+    width: 50%;
+}
+.celsius input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Conversion screen design end */
