@@ -57,18 +57,15 @@ header{
     padding-top: 20px ;
 }
 .hide-display{
-    display: none;
-}
-.show-display{
-    display: block;
+    display: none!important;
 }
 
 /* Conversion screen design */
 
-.temperature-calculation{
+.temperature-calculation, .weight-calculation, .length-calculation{
     display: flex;
 }
-.fahrenheit{
+.fahrenheit, .pounds, .inch{
     height: 100%;
     width: 100%;
     margin-right: 5px;
@@ -76,13 +73,13 @@ header{
     background: var(--primary-color);
     color: var(--secondary-color);
 }
-.fahrenheit p, .celsius p{
-    font-size: 50px;
+.fahrenheit p, .celsius p, .pounds p, .kilogram p, .inch p, .cm p{
+    font-size: 40px;
     text-align: center;
     margin-top: 30px;
     margin-bottom: 150px;
 }
-.fahrenheit input{
+.fahrenheit input, .pounds input, .inch input{
     margin-bottom: 50px;
     border: none;
     outline: none;
@@ -97,18 +94,20 @@ header{
     width: 50%;
 }
 .fahrenheit input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+input::-webkit-inner-spin-button, .pounds input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button, .inch input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
   -webkit-appearance: none;
   margin: 0;
 }
-.celsius{
+.celsius, .kilogram, .cm{
     height: 100%;
     width: 100%;
     border-radius: 0 20px 20px 0;
     background: var(--secondary-color);
     color: var(--primary-color);
 }
-.celsius input{
+.celsius input, .kilogram input, .cm input{
     margin-bottom: 50px;
     border: none;
     outline: none;
@@ -122,6 +121,8 @@ input::-webkit-inner-spin-button {
     width: 50%;
 }
 .celsius input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button, .kilogram input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button, .cm input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
