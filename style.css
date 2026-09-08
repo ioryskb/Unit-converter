@@ -22,9 +22,10 @@ body{
 }
 .container{
     border: 1px solid black;
-    width: 380px;
+    max-width: 380px;
     height: 420px;
     padding: 20px;
+    overflow-y: scroll;
 }
 .heading-area{
     display: flex;
